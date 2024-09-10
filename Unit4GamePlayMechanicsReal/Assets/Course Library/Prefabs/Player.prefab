@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4880404242981974679}
   - component: {fileID: 4880404242981974678}
   - component: {fileID: 4880404242981974677}
-  - component: {fileID: 4880404242981974676}
   - component: {fileID: 4880404242981974681}
+  - component: {fileID: 7499744888606438217}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 789ab9e9c2088324eb6807955fe614e3, type: 2}
+  - {fileID: 2100000, guid: 4c97b24d72ebade4d98acaf3b75c90ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,19 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4880404242981974676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4880404242981974675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8cc711d7a6405b4ab4dd19f716a9a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!54 &4880404242981974681
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,3 +115,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7499744888606438217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4880404242981974675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8cc711d7a6405b4ab4dd19f716a9a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hangTime: 5
+  smashSpeed: 20
+  explosionForce: 20
+  explosionRadius: 20
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 8141766419500110038, guid: 1e393b94e9c36cf4898d477b27b890c7, type: 3}
+  powerupIndicator: {fileID: 8258446761941296818, guid: a2941ee48231a414abf5cdb231aa00f6, type: 3}
+  speed: 5
+  hasPowerup: 0
